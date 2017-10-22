@@ -5,6 +5,7 @@ from GameResources import *
 
 digits = '123456789'
 rows = 'ABCDEFGHI'
+_location = os.path.join(os.path.dirname(os.path.realpath(__file__)), '')
 
 
 def play(values_list):
@@ -14,7 +15,10 @@ def play(values_list):
     size = width, height = 700, 700
     screen = pygame.display.set_mode(size)
 
-    background_image = pygame.image.load("./images/sudoku-board-bare.jpg").convert()
+    image_path = os.path.join(os.path.join(_location, 'images'), '') + "sudoku-board-bare.jpg"
+    # print(image_path)
+    background_image = pygame.image.load(image_path).convert()
+    # print(background_image)
 
     clock = pygame.time.Clock()
 
