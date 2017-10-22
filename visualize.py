@@ -5,7 +5,7 @@ def visualize_assignments(assignments):
     last_assignment = None
     filtered_assignments = []
 
-    for i in range(len(assignments)):
+    for i in range(len(assignments)):        
         if last_assignment:
             last_assignment_items = [item for item in last_assignment.items() if len(item[1]) == 1]
             current_assignment_items = [item for item in assignments[i].items() if len(item[1]) == 1]
